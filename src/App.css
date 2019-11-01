@@ -57,10 +57,10 @@ body {
 .container {
   width: 600px;
   margin: auto;
+  margin-top: 85px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100vh;
 }
 .content {
   background-color: white;

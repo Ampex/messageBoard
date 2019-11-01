@@ -3,7 +3,7 @@ import { TextField, IconButton } from '@material-ui/core'
 import { createMuiTheme } from '@material-ui/core/styles'
 import { ThemeProvider } from '@material-ui/styles'
 import { indigo } from '@material-ui/core/colors'
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward'
 
 const theme = createMuiTheme ({
 
@@ -52,8 +52,8 @@ const Header = props => {
                     onChange={props.change}
                     ></TextField>
 
-                    <IconButton onClick={props.submit}>
-                        <ArrowUpwardIcon color='primary' />
+                    <IconButton color='primary' onClick={props.submit}>
+                        <ArrowUpwardIcon />
                     </IconButton>
 
                 </div>
