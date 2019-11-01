@@ -1,0 +1,93 @@
+:root {
+  --shadow: 1px 2px 10px 0 rgba(0,0,0,.05);
+  --code: 'Source Code Pro', monospace;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -user-select: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  h1 {
+    font-size: 32px !important;
+  }
+}
+.MuiOutlinedInput-notchedOutline {
+  border-color: white !important;
+}
+.form-items > div {
+  margin: 0 5px;
+}
+body {
+  background-color: rgb(239, 243, 247);
+  color: #222;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background-color: #385efb;
+  padding: 10px 0px;
+  color: white;
+}
+.header > * {
+  display: flex;
+  align-items: center;
+  margin: 0 30px;
+  color: white;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+.content {
+  background-color: white;
+  margin: 5px 0;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: var(--shadow)
+}
+code {
+  font-family: var(--code);
+  font-size: 12px;
+  color: #222;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  color: #222;
+}
+
+.error {
+  animation-name: error;
+  animation-duration: 5s;
+  transition: ease-in-out;
+}
+@keyframes error {
+  0% { transform: translateX(0px)}
+  25% { transform: translateX(-30px)}
+  50% { transform: translateX(30px)}
+  100% { transform: translateX(0px)}
+}
