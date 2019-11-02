@@ -6,17 +6,17 @@ import './App.css'
 
 const messages = [
   {
-    'title': 'Pierwszy dzień w pracy',
+    'title': 'Quos modi nihil',
     'message': 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, velit vitae porro optio dolorum neque veritatis praesentium quasi quos modi nihil accusamus molestiae expedita odit, molestias sed quaerat excepturi eos.',
     'time': '29.09.2019, 12:00:38'
   },
   {
-    'title': 'Jak mmiał ona imię...',
+    'title': 'Praesentium quasi...',
     'message': 'velit vitae porro optio dolorum neque veritatis praesentium quasi quos.',
     'time': '20.09.2019, 17:07:43'
   },
   {
-    'title': 'Pasi pasi?',
+    'title': 'Accusamus molestiae?',
     'message': 'Minima, velit vitae porro optio dolorum neque veritatis praesentium quasi quos modi nihil accusamus molestiae expedita odit.',
     'time': '12.09.2019, 05:10:21'
   }
@@ -41,6 +41,7 @@ class App extends Component {
     }
     messages.push(newMessage)
     this.setState ({
+      message: ''
     })
   }
 
@@ -59,9 +60,11 @@ class App extends Component {
 
     return(
       <React.Fragment>
+        <h2>Guest Chat Booard</h2>
         <Header
         change={this.handleChange}
         submit={this.handleSubmit}
+        value={this.state.message}
         />
         <div className='container'>{list ? list.reverse() : 'No messages found yet!'}</div>
       </React.Fragment>

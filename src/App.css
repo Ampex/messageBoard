@@ -27,47 +27,39 @@
 .MuiOutlinedInput-notchedOutline {
   border-color: white !important;
 }
-.form-items > div {
-  margin: 0 5px;
-}
+
 body {
   background-color: rgb(239, 243, 247);
+  background-image: url('./img/bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   color: #222;
   margin: 0 !important;
   padding: 0 !important;
+  margin-top: 60px !important;
 }
 .header {
   display: flex;
+  width: 600px;
+  margin: auto;
+  margin-bottom: 8px;
   align-items: center;
-  justify-content: space-between;
-  top: 0;
-  width: 100%;
-  position: fixed;
-  background-color: #385efb;
-  padding: 10px 0px;
-  color: white;
-}
-.header > * {
-  display: flex;
-  align-items: center;
-  margin: 0 30px;
-  color: white;
 }
 
 .container {
   width: 600px;
   margin: auto;
-  margin-top: 85px;
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
 }
 .content {
   background-color: white;
+  opacity: .97 !important;
   margin: 5px 0;
   padding: 15px;
   border-radius: 4px;
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
 }
 code {
   font-family: var(--code);
@@ -75,9 +67,13 @@ code {
   color: #222;
 }
 
-h1, h2, h3, p {
+h1, h3, p {
   margin: 0;
   color: #222;
+}
+h2 {
+  color: white;
+  text-align: center;
 }
 
 .error {

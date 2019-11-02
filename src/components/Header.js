@@ -35,28 +35,22 @@ const Header = props => {
     return (
         <ThemeProvider theme={theme}>
             <div className='header'>
-                <p>New Message</p>
-                <div className='form-items'>
 
-                    <TextField
-                    name='title'
-                    label='title'
-                    variant='outlined'
-                    onChange={props.change}
-                    ></TextField>
+                <TextField
+                required
+                multiline
+                fullWidth={true}
+                name='message'
+                label='message'
+                variant='outlined'
+                onChange={props.change}
+                value={props.value}
+                ></TextField>
 
-                    <TextField
-                    name='message'
-                    label='message'
-                    variant='outlined'
-                    onChange={props.change}
-                    ></TextField>
-
-                    <IconButton color='primary' onClick={props.submit}>
-                        <ArrowUpwardIcon />
-                    </IconButton>
-
-                </div>
+                <IconButton color='primary' onClick={props.submit}>
+                    <ArrowUpwardIcon />
+                </IconButton>
+            
             </div>
         </ThemeProvider>
     )
