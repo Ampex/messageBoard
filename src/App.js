@@ -31,7 +31,8 @@ class App extends Component {
       [e.target.name]: e.target.value
     })
   }
-  handleSubmit = () => {
+  handleSubmit = e => {
+    e.preventDefault()
 
     const data = new Date().toLocaleString()
     const newMessage = {
@@ -62,12 +63,14 @@ class App extends Component {
     return(
       <React.Fragment>
         <h2>Guest Chat Booard</h2>
+        <p style={{color: 'white', opacity: .8, textAlign: 'center', fontSize: 12, marginBottom: 25}}>© 2019 bkasperski</p>
         <Header
         change={this.handleChange}
         submit={this.handleSubmit}
         value={this.state.message}
         />
         <div className='container'>{list ? list.reverse() : 'No messages found yet!'}</div>
+        
       </React.Fragment>
     )
   }
