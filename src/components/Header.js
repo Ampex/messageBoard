@@ -3,7 +3,7 @@ import { TextField, IconButton } from '@material-ui/core'
 import { createMuiTheme } from '@material-ui/core/styles'
 import { ThemeProvider } from '@material-ui/styles'
 import { indigo } from '@material-ui/core/colors'
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward'
+import PublishIcon from '@material-ui/icons/Publish'
 
 const theme = createMuiTheme ({
 
@@ -12,6 +12,12 @@ const theme = createMuiTheme ({
             light: 'white',
             main: indigo[50],
             dark: '#d2d2d2',
+            contrastText: '#fff'
+        },
+        secondary: {
+            light: '#385efb',
+            main: indigo[50],
+            dark: 'white',
             contrastText: '#fff'
         }
     },
@@ -41,14 +47,14 @@ const Header = props => {
                 multiline
                 fullWidth={true}
                 name='message'
-                label='message'
+                label='Your message'
                 variant='outlined'
                 onChange={props.change}
                 value={props.value}
                 ></TextField>
 
-                <IconButton color='primary' onClick={props.submit}>
-                    <ArrowUpwardIcon />
+                <IconButton style={{marginLeft: 10}} color='primary' onClick={props.submit}>
+                    <PublishIcon />
                 </IconButton>
             
             </div>

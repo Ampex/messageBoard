@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import Header from './components/Header'
-import { Grow } from '@material-ui/core'
+import { Grow, Divider } from '@material-ui/core'
 import ScheduleIcon from '@material-ui/icons/Schedule'
 import './App.css'
 
 const messages = [
   {
-    'title': 'Quos modi nihil',
+    'user': 'guest',
     'message': 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, velit vitae porro optio dolorum neque veritatis praesentium quasi quos modi nihil accusamus molestiae expedita odit, molestias sed quaerat excepturi eos.',
     'time': '29.09.2019, 12:00:38'
   },
   {
-    'title': 'Praesentium quasi...',
+    'user': 'guest',
     'message': 'velit vitae porro optio dolorum neque veritatis praesentium quasi quos.',
     'time': '20.09.2019, 17:07:43'
   },
   {
-    'title': 'Accusamus molestiae?',
+    'user': 'guest',
     'message': 'Minima, velit vitae porro optio dolorum neque veritatis praesentium quasi quos modi nihil accusamus molestiae expedita odit.',
     'time': '12.09.2019, 05:10:21'
   }
@@ -35,7 +35,7 @@ class App extends Component {
 
     const data = new Date().toLocaleString()
     const newMessage = {
-      'title': this.state.title,
+      'user': this.state.user,
       'message': this.state.message,
       'time': data
     }
@@ -50,9 +50,10 @@ class App extends Component {
     const list = messages.map((item, index) => (
       <Grow in key={index}>
         <div className='content'>
-          <code><ScheduleIcon fontSize='inherit' /> {item.time}</code>
-          <p>{item.title}</p>
-          <code>{item.message}</code>
+          <code><ScheduleIcon color='primary' fontSize='inherit' /> {item.time}</code>
+          <code style={{color: '#999'}}> | Author: guest</code>
+          <Divider style={{margin: '8px 0'}} />
+          <p>{item.message}</p>
         </div>
       </Grow>
       
