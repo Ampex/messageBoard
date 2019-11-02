@@ -1,4 +1,4 @@
-It is simply weather app bar for searching a interesting git projects.
+It is a simply chat board app for guests.
 
 # Live demo here: [DEMO](https://bkasperski.pl/weather)
 
@@ -7,7 +7,7 @@ It is simply weather app bar for searching a interesting git projects.
 - ThemeProvider
 - Icons
 - Colors 
-- Paper
-- InputBase
+- TextField
+- Handlers
 
 Hope you like it! Thanks!

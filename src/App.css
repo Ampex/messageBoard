@@ -17,13 +17,20 @@
 
 @media only screen and (max-width: 600px) {
   body {
-    margin: 0 !important;
+    background-position: top !important;
+    background-size: auto !important;
+  }
+  .container, .header {
+    width: 80% !important;
+    margin: 0 auto !important;
+    align-items: center !important;
     padding: 0 !important;
   }
-  h1 {
-    font-size: 32px !important;
+  .content {
+    width: 100% !important;
   }
 }
+
 .MuiOutlinedInput-notchedOutline {
   border-color: white !important;
 }
@@ -34,9 +41,9 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   color: #222;
-  margin: 0 !important;
-  padding: 0 !important;
-  margin-top: 60px !important;
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
 }
 .header {
   display: flex;
@@ -55,7 +62,7 @@ body {
 }
 .content {
   background-color: white;
-  opacity: .97 !important;
+  opacity: .97;
   margin: 5px 0;
   padding: 15px;
   border-radius: 4px;
