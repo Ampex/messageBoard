@@ -20,11 +20,17 @@
     background-position: top !important;
     background-size: auto !important;
   }
-  .container, .header {
+  .container {
     width: 80% !important;
     margin: 0 auto !important;
     align-items: center !important;
     padding: 0 !important;
+  }
+  .header {
+    margin: 0 auto !important;
+    width: 88% !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
   .content {
     width: 100% !important;
@@ -45,11 +51,11 @@ body {
   padding: 0;
   margin-top: 60px;
 }
-.header {
+.header, form {
   display: flex;
   width: 600px;
   margin: auto;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
   align-items: center;
 }
 

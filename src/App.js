@@ -31,9 +31,7 @@ class App extends Component {
       [e.target.name]: e.target.value
     })
   }
-  handleSubmit = e => {
-    e.preventDefault()
-
+  handleSubmit = () => {
     const data = new Date().toLocaleString()
     const newMessage = {
       'user': this.state.user,

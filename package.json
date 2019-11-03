@@ -11,6 +11,7 @@
     "add": "^2.0.6",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-material-ui-form-validator": "^2.0.9",
     "react-scripts": "^3.2.0",
     "recharts": "^1.8.1"
   },
