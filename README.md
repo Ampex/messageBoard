@@ -1,13 +1,16 @@
-It is a simply chat board app for guests.
+It is a simply message board app for guests.
 
-# Live demo here: [DEMO](https://bkasperski.pl/weather)
+# Live demo here: [DEMO](https://bkasperski.pl/messageBoard)
 
 ## Material UI for React
-### Components:
+### Components and their props:
 - ThemeProvider
-- Icons
-- Colors 
-- TextField
+- Icon
+- InputLabel
+- Input
+- FormHelperText 
+- FormControl
 - Handlers
+- IconButton
 
 Hope you like it! Thanks!
