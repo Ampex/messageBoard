@@ -76,7 +76,7 @@ class App extends Component {
 
     return(
       <React.Fragment>
-        <h2>Guest Chat Booard</h2>
+        <h2>Guest Message Booard</h2>
         <p style={{color: 'white', opacity: .8, textAlign: 'center', fontSize: 12, marginBottom: 25}}>© 2019 bkasperski</p>
 
         <Header
