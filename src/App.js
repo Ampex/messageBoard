@@ -23,25 +23,39 @@ const messages = [
 ]
 
 class App extends Component {
+
   state = {
+    value: ''
   }
 
   handleChange = e => {
     this.setState ({
-      [e.target.name]: e.target.value
+      value: e.target.value,
+      helperText: this.state.value.length < 6 ? 'minimum message length is 6' : null,
+      error: this.state.value.length < 6 ? true : null,
     })
   }
+
   handleSubmit = () => {
-    const data = new Date().toLocaleString()
-    const newMessage = {
-      'user': this.state.user,
-      'message': this.state.message,
-      'time': data
-    }
+    
+    if (!this.state.value) {
+      this.setState ({
+        helperText: 'minimum message length is 6',
+        error: true
+      })
+
+    } else {
+      const data = new Date().toLocaleString()
+      const newMessage = {
+        'user': this.state.user,
+        'message': this.state.value,
+        'time': data
+      }      
     messages.push(newMessage)
     this.setState ({
-      message: ''
+      value: ''
     })
+    }
   }
 
   render() {
@@ -62,11 +76,15 @@ class App extends Component {
       <React.Fragment>
         <h2>Guest Chat Booard</h2>
         <p style={{color: 'white', opacity: .8, textAlign: 'center', fontSize: 12, marginBottom: 25}}>© 2019 bkasperski</p>
+
         <Header
         change={this.handleChange}
         submit={this.handleSubmit}
-        value={this.state.message}
+        value={this.state.value}
+        error={this.state.error}
+        helperText={this.state.helperText}
         />
+
         <div className='container'>{list ? list.reverse() : 'No messages found yet!'}</div>
         
       </React.Fragment>

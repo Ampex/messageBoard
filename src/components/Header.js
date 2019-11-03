@@ -1,9 +1,8 @@
 import React from 'react'
-import { IconButton } from '@material-ui/core'
-import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator'
+import { IconButton, FormControl, InputLabel, Input, FormHelperText } from '@material-ui/core'
 import { createMuiTheme } from '@material-ui/core/styles'
 import { ThemeProvider } from '@material-ui/styles'
-import { indigo } from '@material-ui/core/colors'
+import { indigo, red } from '@material-ui/core/colors'
 import SendIcon from '@material-ui/icons/Send'
 
 const theme = createMuiTheme ({
@@ -20,49 +19,59 @@ const theme = createMuiTheme ({
             main: indigo[50],
             dark: 'white',
             contrastText: '#fff'
-        }
+        },
+        error: { main: red[400]}
     },
     overrides: {
+        MuiInput: {
+            root: {
+                fontFamily: 'Poppins, sans-serif',
+                color: 'white',
+            }
+        },
         MuiFormLabel: {
             root: {
                 fontFamily: 'Source Code Pro, monospace',
                 color: 'white'
             }
         },
-        MuiInputBase: {
+        MuiFormHelperText: {
             root: {
-                fontFamily: 'Source Code Pro, monospace',
-                color: 'white'
+                fontFamily: 'Source Code Pro, monospace'
             }
         }
     }
 })
 
 const Header = props => {
+
+    const { error, submit, change, value, helperText } = props
     
     return (
         <ThemeProvider theme={theme}>
             <div className='header'>
-                <ValidatorForm
-                    onSubmit={props.submit}
-                    onError={errors => console.log(errors)}
+                <FormControl
+                required
+                fullWidth
+                error={error}
                 >
-                    <TextValidator
+                    <InputLabel>Your message</InputLabel>                
+                    <Input
                     multiline
-                    fullWidth={true}
-                    name='message'
-                    label='Your message'
-                    variant='outlined'
-                    onChange={props.change}
-                    value={props.value}
-                    validators={['minStringLength:3']}
-                    errorMessages={['this field is required', 'email is not valid']}
-                    ></TextValidator>
+                    onChange={change}
+                    value={value}
+                    />
 
-                    <IconButton style={{marginLeft: 10}} color='primary' type='submit'>
-                        <SendIcon />
-                    </IconButton>
-                </ValidatorForm>
+                    <FormHelperText>{helperText}</FormHelperText>
+
+                </FormControl>
+                <IconButton
+                style={{marginLeft: 15}}
+                disabled={error}
+                color='secondary'
+                onClick={submit}>
+                    <SendIcon />
+                </IconButton>
             </div>
         </ThemeProvider>
     )
