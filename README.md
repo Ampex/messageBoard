@@ -10,7 +10,6 @@ It is a simply message board app for guests.
 - Input
 - FormHelperText 
 - FormControl
-- Handlers
 - IconButton
 
 Hope you like it! Thanks!
