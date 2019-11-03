@@ -4,6 +4,7 @@ import { Grow, Divider } from '@material-ui/core'
 import ScheduleIcon from '@material-ui/icons/Schedule'
 import './App.css'
 
+const min = 'minimum message length is 6'
 const messages = [
   {
     'user': 'guest',
@@ -29,26 +30,27 @@ class App extends Component {
   }
 
   handleChange = e => {
+    const { length } = this.state.value
     this.setState ({
       value: e.target.value,
-      helperText: this.state.value.length < 6 ? 'minimum message length is 6' : null,
-      error: this.state.value.length < 6 ? true : null,
+      helperText: length < 5 ? min : null,
+      error: length < 5 ? true : null,
     })
   }
 
   handleSubmit = () => {
-    
+    const { user, value } = this.state
     if (!this.state.value) {
       this.setState ({
-        helperText: 'minimum message length is 6',
+        helperText: min,
         error: true
       })
 
     } else {
       const data = new Date().toLocaleString()
       const newMessage = {
-        'user': this.state.user,
-        'message': this.state.value,
+        'user': user,
+        'message': value,
         'time': data
       }      
     messages.push(newMessage)
@@ -83,6 +85,7 @@ class App extends Component {
         value={this.state.value}
         error={this.state.error}
         helperText={this.state.helperText}
+        length={this.state.value.length}
         />
 
         <div className='container'>{list ? list.reverse() : 'No messages found yet!'}</div>

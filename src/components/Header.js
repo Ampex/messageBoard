@@ -37,7 +37,8 @@ const theme = createMuiTheme ({
         },
         MuiFormHelperText: {
             root: {
-                fontFamily: 'Source Code Pro, monospace'
+                fontFamily: 'Source Code Pro, monospace',
+                color: 'white'
             }
         }
     }
@@ -57,12 +58,13 @@ const Header = props => {
                 >
                     <InputLabel>Your message</InputLabel>                
                     <Input
+                    inputProps={{ maxLength: 160 }}
                     multiline
                     onChange={change}
                     value={value}
                     />
 
-                    <FormHelperText>{helperText}</FormHelperText>
+                    <FormHelperText>{helperText ? helperText : `${props.length} / 160`}</FormHelperText>
 
                 </FormControl>
                 <IconButton
