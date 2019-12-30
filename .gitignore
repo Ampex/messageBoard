@@ -22,3 +22,6 @@ __tests__
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# images
+/src/img/bg.ai
