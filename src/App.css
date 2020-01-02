@@ -1,5 +1,5 @@
 :root {
-  --shadow: 1px 2px 10px 0 rgba(0, 0, 0, .05);
+  --shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
   --code: 'Source Code Pro', monospace;
 }
 
@@ -15,10 +15,16 @@
   -user-select: none;
 }
 
+@media (max-width: 900px) {
+  body {
+    background-size: 250vw !important;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   body {
     background-position: top !important;
-    background-size: auto !important;
+    background-size: 200vh !important;
   }
 
   .container {
@@ -48,11 +54,11 @@ body {
   background-color: rgb(239, 243, 247);
   background-image: url('./img/bg.svg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 150vw;
   color: #222;
   margin: 0;
   padding: 0;
-  margin-top: 60px;
+  margin: 60px 0;
 }
 
 .header {
@@ -78,6 +84,54 @@ body {
   border-radius: 4px;
   box-shadow: var(--shadow);
   overflow-wrap: break-word;
+}
+
+.user {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+}
+
+.chat {
+  z-index: 1;
+  bottom: 50px;
+  right: 50px;
+  position: fixed;
+}
+
+.bg {
+  background-color: #ffffff;
+}
+
+.circle {
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+
+.chat-window {
+  z-index: -5;
+  width: 200px;
+  bottom: 30px;
+  right: 80px;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transform-origin: right;
+}
+
+.chat-icon {
+  transition: all 0.2s !important;
+}
+
+.chat-icon:hover {
+  transform: scale(1.2) !important;
+}
+
+.close {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 code {
@@ -107,18 +161,18 @@ h2 {
 
 @keyframes error {
   0% {
-    transform: translateX(0px)
+    transform: translateX(0px);
   }
 
   25% {
-    transform: translateX(-30px)
+    transform: translateX(-30px);
   }
 
   50% {
-    transform: translateX(30px)
+    transform: translateX(30px);
   }
 
   100% {
-    transform: translateX(0px)
+    transform: translateX(0px);
   }
 }

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://bkasperski.pl/messageBoard/",
+  "homepage": "https://ampex.github.io/messageBoard/",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -9,6 +9,7 @@
     "@material-ui/lab": "^4.0.0-alpha.29",
     "@nivo/pie": "^0.59.1",
     "add": "^2.0.6",
+    "gh-pages": "^2.1.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-material-ui-form-validator": "^2.0.9",
@@ -16,6 +17,8 @@
     "recharts": "^1.8.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

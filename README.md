@@ -1,15 +1,7 @@
 It is a simply message board app for guests.
 
-# Live demo here: [DEMO](https://bkasperski.pl/messageBoard)
+# Live demo here: [DEMO](https://ampex.github.io/messageBoard/)
 
 ## Material UI for React
-### Components and their props:
-- ThemeProvider
-- Icon
-- InputLabel
-- Input
-- FormHelperText 
-- FormControl
-- IconButton
 
 Hope you like it! Thanks!

@@ -4,7 +4,8 @@ import {
   FormControl,
   InputLabel,
   Input,
-  FormHelperText
+  FormHelperText,
+  Backdrop
 } from '@material-ui/core'
 import { createMuiTheme } from '@material-ui/core/styles'
 import { ThemeProvider } from '@material-ui/styles'
@@ -14,38 +15,35 @@ import SendIcon from '@material-ui/icons/Send'
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: 'white',
-      main: indigo[50],
-      dark: '#d2d2d2',
-      contrastText: '#fff'
+      main: '#5682fb'
     },
     secondary: {
-      light: '#385efb',
+      light: '#ffffff',
       main: indigo[50],
       dark: 'white',
       contrastText: '#fff'
     },
     error: { main: red[400] }
-  },
-  overrides: {
-    MuiInput: {
-      root: {
-        color: 'white'
-      }
-    },
-    MuiFormLabel: {
-      root: {
-        fontFamily: 'Source Code Pro, monospace',
-        color: 'white'
-      }
-    },
-    MuiFormHelperText: {
-      root: {
-        fontFamily: 'Source Code Pro, monospace',
-        color: 'white'
-      }
-    }
   }
+  // overrides: {
+  //   MuiInput: {
+  //     root: {
+  //       color: 'white'
+  //     }
+  //   },
+  //   MuiFormLabel: {
+  //     root: {
+  //       fontFamily: 'Source Code Pro, monospace',
+  //       color: 'white'
+  //     }
+  //   },
+  //   MuiFormHelperText: {
+  //     root: {
+  //       fontFamily: 'Source Code Pro, monospace',
+  //       color: 'white'
+  //     }
+  //   }
+  // }
 })
 
 const Header = props => {
