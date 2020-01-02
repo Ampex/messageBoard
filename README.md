@@ -1,4 +1,4 @@
-It is a simply message board app for guests.
+It is a simple message board app for guests.
 
 # Live demo here: [DEMO](https://ampex.github.io/messageBoard/)
 

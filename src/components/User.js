@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { withStyles, makeStyles } from '@material-ui/core/styles'
+import React from 'react'
+import { withStyles } from '@material-ui/core/styles'
 import { IconButton, Tooltip, Zoom } from '@material-ui/core'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 
@@ -13,8 +13,6 @@ const LightTooltip = withStyles(theme => ({
 }))(Tooltip)
 
 export default function User() {
-  const [isLogged, setLogged] = useState(false)
-
   return (
     <div className='user'>
       <Zoom in>

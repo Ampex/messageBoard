@@ -59,9 +59,10 @@ export default function Chat() {
             </LightTooltip>
           </div>
           <TextField
-            style={{ margin: '25px 0 0 0' }}
+            style={{ margin: '15px 0 0 0' }}
             value={isEmpty}
             onChange={e => setEmpty(e.target.value)}
+            fullWidth
             multiline
             variant='standard'
             margin='dense'
