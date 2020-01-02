@@ -4,13 +4,31 @@ import {
   FormControl,
   InputLabel,
   Input,
-  FormHelperText,
-  Backdrop
+  FormHelperText
 } from '@material-ui/core'
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createMuiTheme, withStyles } from '@material-ui/core/styles'
 import { ThemeProvider } from '@material-ui/styles'
 import { indigo, red } from '@material-ui/core/colors'
 import SendIcon from '@material-ui/icons/Send'
+
+const PrimaryInput = withStyles(theme => ({
+  root: {
+    color: '#ffffff',
+    fontSize: 14
+  }
+}))(Input)
+const PrimaryInputLabel = withStyles(theme => ({
+  root: {
+    color: '#ffffff',
+    fontFamily: 'Source Code Pro, monospace'
+  }
+}))(InputLabel)
+const FormHelper = withStyles(theme => ({
+  root: {
+    color: '#ffffff',
+    fontFamily: 'Source Code Pro, monospace'
+  }
+}))(FormHelperText)
 
 const theme = createMuiTheme({
   palette: {
@@ -25,25 +43,6 @@ const theme = createMuiTheme({
     },
     error: { main: red[400] }
   }
-  // overrides: {
-  //   MuiInput: {
-  //     root: {
-  //       color: 'white'
-  //     }
-  //   },
-  //   MuiFormLabel: {
-  //     root: {
-  //       fontFamily: 'Source Code Pro, monospace',
-  //       color: 'white'
-  //     }
-  //   },
-  //   MuiFormHelperText: {
-  //     root: {
-  //       fontFamily: 'Source Code Pro, monospace',
-  //       color: 'white'
-  //     }
-  //   }
-  // }
 })
 
 const Header = props => {
@@ -53,17 +52,16 @@ const Header = props => {
     <ThemeProvider theme={theme}>
       <div className='header'>
         <FormControl required fullWidth error={error}>
-          <InputLabel>Your message</InputLabel>
-          <Input
+          <PrimaryInputLabel>Your message</PrimaryInputLabel>
+          <PrimaryInput
             inputProps={{ maxLength: 160 }}
             multiline
             onChange={change}
             value={value}
           />
-
-          <FormHelperText>
+          <FormHelper>
             {helperText ? helperText : `${props.length} / 160`}
-          </FormHelperText>
+          </FormHelper>
         </FormControl>
         <IconButton
           style={{ marginLeft: 15 }}
