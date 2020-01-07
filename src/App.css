@@ -88,8 +88,18 @@ body {
 
 .user {
   position: fixed;
+  display: flex;
+  align-items: center;
   top: 25px;
   right: 25px;
+}
+
+.p-small {
+  color: #fff;
+  opacity: 0.8;
+  text-align: center;
+  font-size: 12px;
+  margin: 0 10px;
 }
 
 .chat {
@@ -146,12 +156,6 @@ h3,
 p {
   margin: 0;
   color: #222;
-}
-
-h2 {
-  color: white;
-  text-align: center;
-  margin-bottom: 0;
 }
 
 .error {

@@ -38,7 +38,8 @@ const messages = [
 
 class App extends Component {
   state = {
-    value: ''
+    value: '',
+    user: ''
   }
 
   handleChange = e => {
@@ -89,18 +90,10 @@ class App extends Component {
       <React.Fragment>
         <User />
         <Chat />
-        <h2>Guest Message Board</h2>
-        <p
-          style={{
-            color: 'white',
-            opacity: 0.8,
-            textAlign: 'center',
-            fontSize: 12,
-            marginBottom: 25
-          }}
-        >
-          © 2019 bkasperski
-        </p>
+        <h2 style={{ color: '#fff', marginBottom: 0, textAlign: 'center' }}>
+          Guest Message Board
+        </h2>
+        <p className='p-small'>© 2019 bkasperski</p>
 
         <Header
           change={this.handleChange}
