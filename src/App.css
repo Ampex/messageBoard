@@ -157,27 +157,3 @@ p {
   margin: 0;
   color: #222;
 }
-
-.error {
-  animation-name: error;
-  animation-duration: 5s;
-  transition: ease-in-out;
-}
-
-@keyframes error {
-  0% {
-    transform: translateX(0px);
-  }
-
-  25% {
-    transform: translateX(-30px);
-  }
-
-  50% {
-    transform: translateX(30px);
-  }
-
-  100% {
-    transform: translateX(0px);
-  }
-}
