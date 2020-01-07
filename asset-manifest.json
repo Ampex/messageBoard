@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/messageBoard/static/css/main.e8e253a6.chunk.css",
+    "main.css": "/messageBoard/static/css/main.f749d856.chunk.css",
     "main.js": "/messageBoard/static/js/main.c94909aa.chunk.js",
     "main.js.map": "/messageBoard/static/js/main.c94909aa.chunk.js.map",
     "runtime-main.js": "/messageBoard/static/js/runtime-main.d204f4ee.js",
@@ -8,15 +8,15 @@
     "static/js/2.c7de6db0.chunk.js": "/messageBoard/static/js/2.c7de6db0.chunk.js",
     "static/js/2.c7de6db0.chunk.js.map": "/messageBoard/static/js/2.c7de6db0.chunk.js.map",
     "index.html": "/messageBoard/index.html",
-    "precache-manifest.b0a29826d797c01b53c4fe4a77989df1.js": "/messageBoard/precache-manifest.b0a29826d797c01b53c4fe4a77989df1.js",
+    "precache-manifest.98d26e1344e468cd8f3fac9f0987dc63.js": "/messageBoard/precache-manifest.98d26e1344e468cd8f3fac9f0987dc63.js",
     "service-worker.js": "/messageBoard/service-worker.js",
-    "static/css/main.e8e253a6.chunk.css.map": "/messageBoard/static/css/main.e8e253a6.chunk.css.map",
+    "static/css/main.f749d856.chunk.css.map": "/messageBoard/static/css/main.f749d856.chunk.css.map",
     "static/media/App.css": "/messageBoard/static/media/bg.4995a428.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d204f4ee.js",
     "static/js/2.c7de6db0.chunk.js",
-    "static/css/main.e8e253a6.chunk.css",
+    "static/css/main.f749d856.chunk.css",
     "static/js/main.c94909aa.chunk.js"
   ]
 }
